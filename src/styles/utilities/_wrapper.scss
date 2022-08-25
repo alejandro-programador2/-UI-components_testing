@@ -1,0 +1,9 @@
+/**
+ Creates a container for the content with a max-width and a padding to the edge of the site 
+**/
+
+.wrapper {
+    --wrapper-width: 112rem; /* container's max width */
+    --wrapper-padding: 2rem; /* element's inner padding */
+    width: min(100% - var(--wrapper-padding), var(--wrapper-width) )  
+}

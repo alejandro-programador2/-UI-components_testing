@@ -1,0 +1,28 @@
+/**
+    Add WCAG compliant focus styles to all focusable elements and links
+    them with custom properties for easier personalization
+**/
+
+:is(a, button, input, textarea, summary) {
+    --outline-size: max(2px, 0.08em); /* Outline thickness | Minimum 2px */
+    --outline-style: solid; /* Outline's line style (solid, dashed or dotted)  */
+    --outline-color: currentColor; /*Outline's color (uses text's color by default) */
+}
+
+:is(a, button, input, textarea, summary):focus {
+    outline:
+        var(--outline-size) var(--outline-style) var(--outline-color);
+    outline-offset: var(--outline-offset, var(--outline-size));
+}
+
+@supports selector(:focus-visible) {
+    :is(a, button, input, textarea, summary):focus {
+        outline: none
+    }
+
+    :is(a, button, input, textarea, summary):focus-visible {
+        outline:
+            var(--outline-size) var(--outline-style) var(--outline-color);
+        outline-offset: var(--outline-offset, var(--outline-size));
+    }
+}

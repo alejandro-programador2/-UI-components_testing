@@ -1,2 +1,7 @@
 
+@use './_display.scss';
 @use './_margin.scss';
+@use './sr-only.scss';
+@use './_typography.scss';
+@use './_wrapper.scss';
+@use '~animate.css/animate.css';
