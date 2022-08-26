@@ -1,6 +1,7 @@
 @use "./margins" as *;
 @use "./font-sizes" as *;
 @use "./colors" as *;
+@use "./padding" as *;
 
 :root {
 
@@ -25,4 +26,10 @@
   $item in $margins {
     --margin-#{$key}: #{$item};
   }
+
+  // Paddings
+  @each $key, $item in $paddings {
+    --padding-#{$key}: #{$item};
+  }
 }
+
