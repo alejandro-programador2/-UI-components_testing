@@ -2,27 +2,27 @@
     Utilities for controlling the alignment of text.
 **/
 
-.text-left {
+.u-text-left {
     text-align: left;
 }
 
-.text-center {
+.u-text-center {
     text-align: center;
 }
 
-.text-right {
+.u-text-right {
     text-align: right;
 }
 
-.text-justify {
+.u-text-justify {
     text-align: justify;
 }
 
-.text-start {
+.u-text-start {
     text-align: start;
 }
 
-.text-end {
+.u-text-end {
     text-align: end;
 }
 
@@ -31,19 +31,19 @@
     Utilities for controlling the transformation of text.
 **/
 
-.uppercase {
+.u-uppercase {
     text-transform: uppercase;
 }
 
-.lowercase {
+.u-lowercase {
     text-transform: lowercase;
 }
 
-.capitalize {
+.u-capitalize {
     text-transform: capitalize;
 }
 
-.normal-case {
+.u-normal-case {
     text-transform: none;
 }
 
@@ -52,17 +52,17 @@
     Utilities for controlling text overflow in an element.
 **/
 
-.truncate {
+.u-truncate {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
 
-.text-ellipsis {
+.u-text-ellipsis {
     text-overflow: ellipsis;
 }
 
-.text-clip {
+.u-text-clip {
     text-overflow: clip;
 }
 
@@ -71,39 +71,39 @@
     Utilities for controlling the font weight of an element.
 **/
 
-.font-thin {
+.u-font-thin {
     font-weight: 100;
 }
 
-.font-extralight {
+.u-font-extralight {
     font-weight: 200;
 }
 
-.font-light {
+.u-font-light {
     font-weight: 300;
 }
 
-.font-normal {
+.u-font-normal {
     font-weight: 400;
 }
 
-.font-medium {
+.u-font-medium {
     font-weight: 500;
 }
 
-.font-semibold {
+.u-font-semibold {
     font-weight: 600;
 }
 
-.font-bold {
+.u-font-bold {
     font-weight: 700;
 }
 
-.font-extrabold {
+.u-font-extrabold {
     font-weight: 800;
 }
 
-.font-black {
+.u-font-black {
     font-weight: 900;
 }
 
@@ -112,11 +112,11 @@
     Utilities for controlling the style of text.
 **/
 
-.italic {
+.u-italic {
     font-style: italic;
 }
 
-.not-italic {
+.u-not-italic {
     font-style: normal;
 }
 
@@ -125,39 +125,39 @@
     Utilities for controlling the variant of numbers.
 **/
 
-.normal-nums {
+.u-normal-nums {
     font-variant-numeric: normal;
 }
 
-.ordinal {
+.u-ordinal {
     font-variant-numeric: ordinal;
 }
 
-.slashed-zero {
+.u-slashed-zero {
     font-variant-numeric: slashed-zero;
 }
 
-.lining-nums {
+.u-lining-nums {
     font-variant-numeric: lining-nums;
 }
 
-.oldstyle-nums {
+.u-oldstyle-nums {
     font-variant-numeric: oldstyle-nums;
 }
 
-.proportional-nums {
+.u-proportional-nums {
     font-variant-numeric: proportional-nums;
 }
 
-.tabular-nums {
+.u-tabular-nums {
     font-variant-numeric: tabular-nums;
 }
 
-.diagonal-fractions {
+.u-diagonal-fractions {
     font-variant-numeric: diagonal-fractions;
 }
 
-.stacked-fractions {
+.u-stacked-fractions {
     font-variant-numeric: stacked-fractions;
 }
 
@@ -166,14 +166,14 @@
     Utilities for controlling the bullet/number style of a list.
 **/
 
-.list-none {
+.u-list-none {
     list-style-type: none;
 }
 
-.list-disc {
+.u-list-disc {
     list-style-type: disc;
 }
 
-.list-decimal {
+.u-list-decimal {
     list-style-type: decimal;
 }

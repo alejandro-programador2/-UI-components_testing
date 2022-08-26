@@ -4,12 +4,12 @@
 
 :root {
   // Colores
-
   @each $key, $item in $colors {
     @each $shade, $color in $item {
       --clr-#{$key}-#{$shade}: #{$color};
     }
   }
+  
   // Tamaños de letra
   @each $key, $item in $font-sizes {
     --fs-#{$key}: #{$item};
