@@ -1,7 +1,8 @@
-
 @use './_display.scss';
 @use './_margin.scss';
+@use "./color";
+@use "./font-size";
 @use './sr-only.scss';
 @use './_typography.scss';
 @use './_wrapper.scss';
-@import '~animate.css/animate.css';
+@import "~animate.css/animate.css";
