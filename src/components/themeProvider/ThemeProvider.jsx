@@ -2,15 +2,20 @@ import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 export const ThemeProvider = ({ children, theme = {} }) => {
-	const updateCSSProperties = (customProperties) => {
-		const rootElement = document.documentElement;
+	const updateCSSProperties =  (customProperties) => {
+		// Se crea una nueva hoja de estilos
+		const sheet = new CSSStyleSheet();
+		let rule = ':root { ';
 
 		for (const variable in customProperties) {
-			rootElement.style.setProperty(
-				`--${variable}`,
-				customProperties[variable]
-			);
+			rule += `--clr-${variable}: ${customProperties[variable]};\n`;
 		}
+		rule += '};'
+
+		// Aplicamos las reglas a la hoja de estilos
+		sheet.replaceSync(rule);
+		// Aplicamos la hoja de estilo al document
+		document.adoptedStyleSheets = [sheet];
 	};
 
 	useEffect(() => {

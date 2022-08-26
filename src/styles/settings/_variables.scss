@@ -3,20 +3,26 @@
 @use "./colors" as *;
 
 :root {
+
   // Colores
-  @each $key, $item in $colors {
-    @each $shade, $color in $item {
+  @each $key,
+  $item in $colors {
+
+    @each $shade,
+    $color in $item {
       --clr-#{$key}-#{$shade}: #{$color};
     }
   }
-  
+
   // Tamaños de letra
-  @each $key, $item in $font-sizes {
+  @each $key,
+  $item in $font-sizes {
     --fs-#{$key}: #{$item};
   }
 
   // Márgenes
-  @each $key, $item in $margins {
+  @each $key,
+  $item in $margins {
     --margin-#{$key}: #{$item};
   }
 }

@@ -1,11 +1,28 @@
+import { createTheme } from 'helpers/createTheme';
+import { ThemeProvider } from 'components/themeProvider/ThemeProvider';
+import { Button } from 'components/buttons/Button';
+
 export const App = () => {
-  return (
-    <>
-      <p className="u-mb-1">Margin 1</p>
-      <p className="u-mb-2">Margin 2</p>
-      <p className="u-mb-3">Margin 3</p>
-      <p className="u-mb-16">Margin 4</p>
-      <p>No margin</p>
-    </>
-  );
+	const theme = {
+		palette: {
+			primary: {
+				900: '#43302b',
+			},
+		},
+	};
+
+	return (
+		<ThemeProvider theme={createTheme(theme)}>
+			<Button label='#43302b' primary />
+
+			<button className='u-mt-16'>margin</button>
+
+			<p className='u-text-primary-900'>
+				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis
+				perferendis, cumque sint ea, sed fugit voluptate explicabo ipsum
+				quibusdam quia dolorum voluptates deleniti quaerat aspernatur? Optio
+				saepe fugit tenetur aperiam!
+			</p>
+		</ThemeProvider>
+	);
 };
