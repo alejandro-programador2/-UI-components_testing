@@ -1,29 +1,39 @@
-import { useEffect } from 'react';
+import { useEffect, memo } from 'react';
 import PropTypes from 'prop-types';
 
-export const ThemeProvider = ({ children, theme = {} }) => {
-	const updateCSSProperties =  (customProperties) => {
-		// Se crea una nueva hoja de estilos
-		const sheet = new CSSStyleSheet();
-		let rule = ':root { ';
+export const ThemeProvider = memo(({ children, theme = {} }) => {
+	/**
+	 * Función encargada de agregas las nuevas
+	 * variables de color a una hoja de estilos.
+	 * @param {Object} customProperties
+	 */
+	const updateCSSProperties = (customProperties) => {
+		// Creamos el elemento style.
+		const styleElement = document.createElement('style');
+
+		// Agregamos el elemento <style> al <head>.
+		document.head.append(styleElement);
+
+		// Referenciamos la hoja de estilos del styleElement.
+		const styleSheet = styleElement.sheet;
+
+		// Variable que almacenara todas las reglas de CSS.
+		let rule = '';
 
 		for (const variable in customProperties) {
 			rule += `--clr-${variable}: ${customProperties[variable]};\n`;
 		}
-		rule += '};'
 
-		// Aplicamos las reglas a la hoja de estilos
-		sheet.replaceSync(rule);
-		// Aplicamos la hoja de estilo al document
-		document.adoptedStyleSheets = [sheet];
+		// Insertamos las reglas del CSS a la hoja de estilos.
+		styleSheet.insertRule(`:root{${rule}}`);
 	};
 
 	useEffect(() => {
-		if (theme) updateCSSProperties(theme);
+		updateCSSProperties(theme);
 	}, [theme]);
 
 	return children;
-};
+});
 
 ThemeProvider.propTypes = {
 	children: PropTypes.oneOfType([PropTypes.array, PropTypes.element]),

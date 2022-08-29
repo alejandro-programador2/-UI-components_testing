@@ -1,3 +1,9 @@
+/**
+ * Función recursiva permite aplanar un objeto.
+ * 
+ * @param {Object} object 
+ * @returns Object
+ */
 const flatObject = (object) => {
 	let newObject = {};
 
@@ -19,6 +25,15 @@ const flatObject = (object) => {
 	return newObject;
 };
 
+
+/**
+ * 
+ * Función que permite crear un nuevo Tema
+ * por medio de un objeto
+ * 
+ * @param {Object} theme 
+ * @returns Object
+ */
 export const createTheme = (theme) => {
 	return flatObject(theme);
 };
